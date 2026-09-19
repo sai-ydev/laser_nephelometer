@@ -3,6 +3,8 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
+        "apply_defaults_to_fp_barcodes": false,
+        "apply_defaults_to_fp_dimensions": false,
         "apply_defaults_to_fp_fields": false,
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
@@ -79,6 +81,7 @@
         "extra_footprint": "warning",
         "footprint": "error",
         "footprint_filters_mismatch": "ignore",
+        "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
@@ -97,6 +100,7 @@
         "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
+        "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
@@ -110,14 +114,18 @@
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
         "text_height": "warning",
+        "text_on_edge_cuts": "error",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
+        "track_not_centered_on_via": "ignore",
+        "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
+        "tuning_profile_track_geometries": "ignore",
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "warning",
@@ -735,7 +743,110 @@
       "version": 5
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "/ADS1115_ALRT": [
+        "Interrupts"
+      ],
+      "/ADS115_ALRT": [
+        "Interrupts"
+      ],
+      "/Analog_Sheet/ADS1115_ALRT": [
+        "Interrupts"
+      ],
+      "/Analog_Sheet/I2C_SCL": [
+        "Communication"
+      ],
+      "/Analog_Sheet/I2C_SDA": [
+        "Communication"
+      ],
+      "/Analog_Sheet/I_SCATTER": [
+        "Analog"
+      ],
+      "/Analog_Sheet/I_TRANS": [
+        "Analog"
+      ],
+      "/Analog_Sheet/LASER_ANODE": [
+        "Analog"
+      ],
+      "/Analog_Sheet/PWM_LASER": [
+        "Passives"
+      ],
+      "/Analog_Sheet/V_SCATTER": [
+        "Analog"
+      ],
+      "/Analog_Sheet/V_TRANS": [
+        "Analog"
+      ],
+      "/I2C_SCL": [
+        "Communication"
+      ],
+      "/I2C_SDA": [
+        "Communication"
+      ],
+      "/LED": [
+        "Passives"
+      ],
+      "/LED.R": [
+        "Passives"
+      ],
+      "/NEOPIXEL_IN": [
+        "Communication"
+      ],
+      "/PWM_LASER": [
+        "Passives"
+      ],
+      "/Peripherals Sheet/1DO_2DI": [
+        "Communication"
+      ],
+      "/Peripherals Sheet/2DO_3DI": [
+        "Communication"
+      ],
+      "/Peripherals Sheet/3DO_4DI": [
+        "Communication"
+      ],
+      "/Peripherals Sheet/DI": [
+        "Communication"
+      ],
+      "/Peripherals Sheet/IRQ": [
+        "Passives"
+      ],
+      "/Peripherals Sheet/NEOPIXEL_HIGH": [
+        "Communication"
+      ],
+      "/Peripherals Sheet/NEOPIXEL_IN": [
+        "Communication"
+      ],
+      "/Peripherals Sheet/POCI": [
+        "WIFI"
+      ],
+      "/Peripherals Sheet/TARGET_RX": [
+        "Communication"
+      ],
+      "/Peripherals Sheet/TARGET_TX": [
+        "Communication"
+      ],
+      "/Peripherals Sheet/WIFI_BLE_ON(GPIO23)": [
+        "Passives"
+      ],
+      "/RES.BUTTON": [
+        "Buttons"
+      ],
+      "/RTC_INT": [
+        "Interrupts"
+      ],
+      "/V_TRANS": [
+        "Analog"
+      ],
+      "/~{BOOT}": [
+        "Passives"
+      ],
+      "/~{PSRAM_CS}": [
+        "QSPI"
+      ],
+      "/~{RESET}": [
+        "Passives"
+      ]
+    },
     "netclass_patterns": [
       {
         "netclass": "USB Diff",
@@ -988,7 +1099,7 @@
         "uuid": "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
       }
     ],
-    "used_designators": "R1-2,J1,#PWR1-2",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
@@ -997,8 +1108,12 @@
       "laser_nephelometer"
     ],
     [
-      "979f99c7-8f69-4b3f-bc78-6150a1b7a14d",
-      "Power_Supply"
+      "5f4deeec-a53a-4895-bbfb-048e8bd79a2e",
+      "Analog_Sheet"
+    ],
+    [
+      "d054f463-cd33-490a-ba07-dd7791bf82e9",
+      "Peripherals Sheet"
     ]
   ],
   "text_variables": {},
